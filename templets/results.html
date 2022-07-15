@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Wine Quality Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='wine.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		 <!-- add icon link -->
+		 <link rel = "icon" href = 
+		 "https://www.plumm.com/globalassets/productassets/pluv4410a2/default-large/pluv4410a2_1_default-large.png" 
+				 type = "image/x-icon">
+	</head>
+
+    <body style="background-color:rgba(186, 228, 239, 0.347);">
+		<div align = " center" class="container">
+            <h2 align = " center" class='container-heading'><span class="heading_font">Wine Quality Predictor</span></h2>
+            <div align = " center"  class='description'>
+    			<h3>Your Wine Result is Here👇</h3>
+    		</div>
+    	</div>
+	</body>
+		<!-- Result -->
+		<div  align = "center"class="results">
+			{% if prediction==1 %}
+				<h1>Prediction : <span class='safe'>Wow..! The Quality of wine is GOOD.</span></h1>
+				<img class="jpeg" width="400" src="{{ url_for('static', filename='good wine.jpg')}}" alt="Good Wine Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>The Predicted Quality of Wine is BAD..!.</span></h1>
+				<img class="jpeg1" width="400" src="{{ url_for('static', filename='bad wine.jpg')}}" alt="Bad Wine Image">
+			{% endif %}
+		</div>
+		</body>
+		<footer align ="center" class="footer">
+            <div>
+                <p>&copy;2022 Deepthi shetty. All Rights Are Reserved.</p>
+                <p>Nice to See You...❤️😊</p>
+            </div>
+        </footer>
+		</div>
+</html>
+  
